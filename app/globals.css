@@ -2,32 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+    :root {
+        /* Name: custom color palette
+       Author: Ilias Ism
+       URL: https://gradient.page */
+
+        /* CSS: .bg-gradient { background: var(--gradient) } */
+        --gradient: linear-gradient(to top left, #1d976c, #93f9b9);
+        --background-gradient: linear-gradient(to top right, #111, #001c16);
+
+        --background: 169 44.2% 2.8%;
+        --foreground: 169 6.800000000000001% 96.75%;
+
+        --muted: 169 34% 10.5%;
+        --muted-foreground: 169 6.800000000000001% 53.5%;
+
+        --popover: 169 51.4% 4.55%;
+        --popover-foreground: 169 6.800000000000001% 96.75%;
+
+        --card: 169 51.4% 4.55%;
+        --card-foreground: 169 6.800000000000001% 96.75%;
+
+        --border: 169 34% 10.5%;
+        --input: 169 34% 10.5%;
+
+        --primary: 169 70% 45%;
+        --primary-foreground: 169 6.800000000000001% 96.75%;
+        --primary-hover: 169, 87%, 60%;
+
+        --secondary: 169 34% 10.5%;
+        --secondary-foreground: 169 6.800000000000001% 96.75%;
+
+        --accent: 169 34% 10.5%;
+        --accent-foreground: 169 6.800000000000001% 96.75%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 169 6.800000000000001% 96.75%;
+
+        --ring: 169 68% 35%;
+        --radius: 0.75rem;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container {
+    @apply max-w-7xl lg:mx-auto p-4 md:px-10 w-full;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.gradient {
+    background: var(--gradient);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.bg-gradient {
+    background: var(--background-gradient);
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply text-foreground;
+    }
+}
+
+body:before {
+    content: "";
+    background-image: url(/grid.svg);
+    background-repeat: repeat;
+    position: absolute;
+    inset: 0;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
