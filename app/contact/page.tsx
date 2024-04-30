@@ -1,3 +1,4 @@
+"use client";
 import { H1, H2 } from "@/components/typography/Headings";
 import { ContactForm } from "./form/ContactForm";
 import { Card } from "@/components/ui/card";
@@ -9,6 +10,7 @@ import { faDiscord, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledLink from "@/components/shared/StyledLink";
 import Link from "next/link";
 import SocialsCard from "./SocialsCard";
+import DiscordButton from "./DiscordButton";
 
 const page = () => {
     return (
@@ -29,22 +31,19 @@ const page = () => {
                 </Blockquote>
                 <Blockquote>
                     <P className="font-bold">Socials:</P>
-                    <SocialsCard>
-                        <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="w-8 h-8"
-                            color=""
-                        />
-                        Mindaugas Bankauskas
-                    </SocialsCard>
-                    <SocialsCard>
-                        <FontAwesomeIcon
-                            icon={faDiscord}
-                            className="w-8 h-8"
-                            color=""
-                        />
-                        Mndgs#7132
-                    </SocialsCard>
+                    <Link
+                        href="https://www.linkedin.com/in/mindaugas-bankauskas/"
+                        target="_blank">
+                        <Card className="py-2 px-4 flex gap-2 w-fit items-center group hover:border-primary mb-2">
+                            <FontAwesomeIcon
+                                icon={faLinkedin}
+                                className="w-8 h-8"
+                                color=""
+                            />
+                            Mindaugas Bankauskas
+                        </Card>
+                    </Link>
+                    <DiscordButton></DiscordButton>
                 </Blockquote>
             </section>
             <section className="col-span-2 section">

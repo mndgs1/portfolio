@@ -3,7 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/sections/header";
 import Footer from "@/components/sections/footer";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 
 import { cn } from "@/lib/utils";
 

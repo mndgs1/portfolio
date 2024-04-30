@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 type SocialsCardProps = {
     children: ReactNode;
+    onClick?: void;
 };
 
 const SocialsCard = ({ children }: SocialsCardProps) => {

@@ -24,8 +24,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import { useToast } from "@/components/ui/use-toast";
-
+import { toast } from "sonner";
 import { submitContactForm } from "./submitContactForm";
 
 const formSchema = z.object({
@@ -52,7 +51,6 @@ export function ContactForm() {
         },
     });
 
-    const { toast } = useToast();
     // const [formReceived, setFormReceived] = useState(false);
     // 2. Define a submit handler.
     async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -61,25 +59,18 @@ export function ContactForm() {
 
             console.log(response);
             if (response.success) {
-                toast({
-                    title: `Thank you ${values.name} for contacting me!`,
-                    description: `I will get back to you as soon as possible.`,
+                toast(`Thank you ${values.name} for contacting me!`, {
+                    description: ` I will get back to you as soon as possible.`,
                 });
                 form.reset();
             } else {
-                toast({
-                    variant: "destructive",
-                    title: "Uh oh! Something went wrong.",
-                    description:
-                        "There was a problem sending your message. Please try another contact method...",
+                toast("Uh oh! Something went wrong.", {
+                    description: "There was a problem sending your message.",
                 });
             }
         } catch (e) {
-            toast({
-                variant: "destructive",
-                title: "Uh oh! Something went wrong.",
-                description:
-                    "There was a problem sending your message. Please try another contact method...",
+            toast("Uh oh! Something went wrong.", {
+                description: "There was a problem sending your message.",
             });
         }
     }
