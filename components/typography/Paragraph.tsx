@@ -34,9 +34,5 @@ export function P({ children, className, variant, size }: PProps) {
 }
 
 export function Blockquote({ children, className }: TypographyProps) {
-    return (
-        <blockquote className="mt-6 border-l-2 pl-6 italic">
-            {children}
-        </blockquote>
-    );
+    return <blockquote className="mt-6 border-l-2 pl-6">{children}</blockquote>;
 }

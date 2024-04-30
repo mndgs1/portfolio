@@ -46,7 +46,7 @@
 }
 
 .container {
-    @apply max-w-7xl lg:mx-auto p-4 md:px-10 w-full;
+    @apply max-w-7xl lg:mx-auto p-4 md:px-10 xl:px-14 w-full;
 }
 
 .gradient {
@@ -76,4 +76,8 @@ body:before {
     width: 100%;
     height: 100%;
     pointer-events: none;
+}
+
+.section {
+    @apply my-8 md:my-14;
 }

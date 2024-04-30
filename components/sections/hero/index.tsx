@@ -3,6 +3,7 @@ import { H1 } from "@/components/typography/Headings";
 import { P } from "@/components/typography/Paragraph";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useToast } from "@/components/ui/use-toast";
 
 const Hero = () => {
     return (
