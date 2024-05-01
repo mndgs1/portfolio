@@ -11,9 +11,7 @@ import LinkWithIcon from "../../components/shared/LinkWithIcon";
 
 const page = () => {
     return (
-        <div
-            className="lg:grid lg:grid-cols-4 lg:gap-12 items-center
-        ">
+        <article className="lg:grid lg:grid-cols-4 lg:gap-12 items-center">
             <section className="section col-span-2">
                 <H2>Let&apos;s talk</H2>
                 <Blockquote>
@@ -47,7 +45,7 @@ const page = () => {
                     <ContactForm />
                 </Card>
             </section>
-        </div>
+        </article>
     );
 };
 

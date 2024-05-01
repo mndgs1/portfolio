@@ -21,11 +21,11 @@ const Hero = () => {
                             preRenderFirstString={true}
                             sequence={[
                                 // Same substring at the start will only be typed once, initially
-                                "Husband",
-                                2000,
-                                "Father",
+                                "Husband & Father",
                                 2000,
                                 "Carpenter of the Web",
+                                2000,
+                                "UX/UI Designer",
                                 2000,
                                 "Front-End Developer",
                                 2000,

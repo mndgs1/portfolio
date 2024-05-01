@@ -18,7 +18,7 @@ const NavLink = ({ href, label, pathname }: NavLinkProps) => {
                 }`}>
                 {label}
                 <div
-                    className={`bg-muted-foreground group-hover:w-full h-[1px] transition-all duration-300 ${
+                    className={`bg-primary group-hover:w-full h-[1px] transition-all duration-300 ${
                         pathname === href ? "w-full" : "w-0"
                     }`}></div>
             </Link>

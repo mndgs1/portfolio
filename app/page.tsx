@@ -7,7 +7,6 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { H2, H3 } from "@/components/typography/Headings";
-import { P } from "@/components/typography/Paragraph";
 import FeaturedProjectCard from "@/components/shared/FeaturedProjectCard";
 
 import LinkWithIcon from "@/components/shared/LinkWithIcon";
@@ -49,9 +48,6 @@ export default function Home() {
             </section>
             <section className="About me">
                 <H2>About me</H2>
-            </section>
-            <section>
-                <H2>Contact Information</H2>
             </section>
         </>
     );

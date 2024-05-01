@@ -18,9 +18,9 @@ const MobileNav = () => {
         <Sheet>
             <SheetTrigger asChild>
                 <Button
-                    variant={"secondary"}
+                    variant={"icon"}
                     size={"icon"}
-                    className="md:hidden">
+                    className="md:hidden h-10 w-10">
                     <Menu size={"1.4rem"} />
                 </Button>
             </SheetTrigger>
