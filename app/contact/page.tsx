@@ -1,16 +1,13 @@
-"use client";
-import { H1, H2 } from "@/components/typography/Headings";
+import { H2 } from "@/components/typography/Headings";
 import { ContactForm } from "./form/ContactForm";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Blockquote, P } from "@/components/typography/Paragraph";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledLink from "@/components/shared/StyledLink";
-import Link from "next/link";
-import SocialsCard from "./SocialsCard";
 import DiscordButton from "./DiscordButton";
+import LinkWithIcon from "../../components/shared/LinkWithIcon";
 
 const page = () => {
     return (
@@ -31,19 +28,17 @@ const page = () => {
                 </Blockquote>
                 <Blockquote>
                     <P className="font-bold">Socials:</P>
-                    <Link
+                    <LinkWithIcon
                         href="https://www.linkedin.com/in/mindaugas-bankauskas/"
-                        target="_blank">
-                        <Card className="py-2 px-4 flex gap-2 w-fit items-center group hover:border-primary mb-2">
-                            <FontAwesomeIcon
-                                icon={faLinkedin}
-                                className="w-8 h-8"
-                                color=""
-                            />
-                            Mindaugas Bankauskas
-                        </Card>
-                    </Link>
-                    <DiscordButton></DiscordButton>
+                        className="hover:border-[#0A66C2] mb-2 bg-[#0A66C2]/10 border-[#0A66C2]/20 hover:bg-[#0A66C2]/20">
+                        <FontAwesomeIcon
+                            icon={faLinkedin}
+                            className="w-8 h-8"
+                            color="#0A66C2"
+                        />
+                        Mindaugas Bankauskas
+                    </LinkWithIcon>
+                    <DiscordButton />
                 </Blockquote>
             </section>
             <section className="col-span-2 section">

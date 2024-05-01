@@ -1,20 +1,39 @@
+"use client";
 import StyledLink from "@/components/shared/StyledLink";
 import { H1 } from "@/components/typography/Headings";
 import { P } from "@/components/typography/Paragraph";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useToast } from "@/components/ui/use-toast";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
     return (
-        <section className="py-32">
+        <section className="my-32">
             <P variant={"muted"}>Hello World! I am</P>
             <div className="flex flex-col gap-6">
-                <H1 className="mb-0 lg:mb-0">
-                    Mindaugas <span className="text-primary">Bankauskas</span>,{" "}
-                    <br />
-                    Front-End Developer
-                </H1>
+                <div>
+                    <H1 className="mb-0 lg:mb-0">
+                        Mindaugas{" "}
+                        <span className="text-primary">Bankauskas</span>,{" "}
+                    </H1>
+                    <H1 className="mb-0 lg:mb-0">
+                        <TypeAnimation
+                            preRenderFirstString={true}
+                            sequence={[
+                                // Same substring at the start will only be typed once, initially
+                                "Husband",
+                                2000,
+                                "Father",
+                                2000,
+                                "Carpenter of the Web",
+                                2000,
+                                "Front-End Developer",
+                                2000,
+                            ]}
+                            speed={25}
+                        />
+                    </H1>
+                </div>
                 <P variant={"muted"} className="mb-0">
                     As a full-stack JavaScript developer, I build modern web
                     apps with tools such as{" "}

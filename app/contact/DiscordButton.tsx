@@ -1,5 +1,6 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
@@ -12,11 +13,11 @@ const DiscordButton = () => {
 
     return (
         <button onClick={handleDiscordClick}>
-            <Card className="py-2 px-4 flex gap-2 w-fit items-center group hover:border-primary mb-2">
+            <Card className="py-2 px-4 flex gap-2 w-fit items-center group hover:bg-[#5865F2]/20 hover:border-[#5865F2] mb-2 bg-[#5865F2]/10 border-[#5865F2]/20 transition-all">
                 <FontAwesomeIcon
                     icon={faDiscord}
                     className="w-8 h-8"
-                    color=""
+                    color="#5865F2"
                 />
                 Mndgs#7132
             </Card>

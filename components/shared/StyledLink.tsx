@@ -1,13 +1,21 @@
+import { cva } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-type StyledLinkProps = {
+interface StyledLinkProps extends React.ComponentPropsWithoutRef<"a"> {
     href: string;
-    children: React.ReactNode;
-};
+}
 
-const StyledLink = ({ href, children }: StyledLinkProps) => {
+const StyledLink = ({
+    href,
+    children,
+    className,
+    ...rest
+}: StyledLinkProps) => {
+    const classes = cva("text-primary hover:text-primary-hover");
+
     return (
-        <Link href={href} className="text-primary hover:text-primary-hover">
+        <Link {...rest} href={href} className={cn(classes({ className }))}>
             {children}
         </Link>
     );
