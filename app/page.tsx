@@ -38,7 +38,7 @@ export default function Home() {
                         ))}
                     </CarouselContent>
                     <CarouselPrevious className="hidden xl:flex hover:border-primary" />
-                    <CarouselNext className="hidden xl:flex" />
+                    <CarouselNext className="hidden xl:flex hover:border-primary" />
                 </Carousel>
             </section>
             <section className="My stack">
