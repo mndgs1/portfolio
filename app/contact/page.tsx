@@ -4,12 +4,16 @@ import { Card } from "@/components/ui/card";
 import { Blockquote, P } from "@/components/typography/Paragraph";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import StyledLink from "@/components/shared/StyledLink";
 import DiscordButton from "./DiscordButton";
 import LinkWithIcon from "../../components/shared/LinkWithIcon";
+import { person } from "@/data/person";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const page = () => {
+    const { socialLinks } = person;
     return (
         <article className="lg:grid lg:grid-cols-4 lg:gap-12 items-center">
             <section className="section col-span-2">
@@ -26,17 +30,28 @@ const page = () => {
                 </Blockquote>
                 <Blockquote>
                     <P className="font-bold">Socials:</P>
-                    <LinkWithIcon
-                        href="https://www.linkedin.com/in/mindaugas-bankauskas/"
-                        className="hover:border-[#0A66C2] mb-2 bg-[#0A66C2]/10 border-[#0A66C2]/20 hover:bg-[#0A66C2]/20">
-                        <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="w-8 h-8"
-                            color="#0A66C2"
-                        />
-                        Mindaugas Bankauskas
-                    </LinkWithIcon>
-                    <DiscordButton />
+                    <Link href={socialLinks.linkedIn} target="_blank">
+                        <Button
+                            variant={"icon"}
+                            size={"icon"}
+                            className="w-14 h-14 mr-3">
+                            <FontAwesomeIcon
+                                icon={faLinkedin}
+                                className="w-8 h-8"
+                            />
+                        </Button>
+                    </Link>
+                    <Link href={socialLinks.github} target="_blank">
+                        <Button
+                            variant={"icon"}
+                            size={"icon"}
+                            className="w-14 h-14">
+                            <FontAwesomeIcon
+                                icon={faGithub}
+                                className="w-8 h-8"
+                            />
+                        </Button>
+                    </Link>
                 </Blockquote>
             </section>
             <section className="col-span-2 section">

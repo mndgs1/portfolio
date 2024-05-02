@@ -12,10 +12,15 @@ import FeaturedProjectCard from "@/components/shared/FeaturedProjectCard";
 
 import LinkWithIcon from "@/components/shared/LinkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinode } from "@fortawesome/free-brands-svg-icons";
+import { faNodeJs, faReact } from "@fortawesome/free-brands-svg-icons";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Link from "next/link";
 import Image from "next/image";
+import StackCard from "@/components/shared/StackCard";
+import { person } from "@/data/person";
 
 export default function Home() {
+    const { stack } = person;
     return (
         <>
             <Hero />
@@ -36,17 +41,45 @@ export default function Home() {
             </section>
             <section className="My stack">
                 <H2 className="">My stack</H2>
-                <H3 className="">Back-End</H3>
-                <LinkWithIcon
-                    href="https://nodejs.org/en"
-                    className="hover:border-[#0A66C2] mb-2 bg-[#0A66C2]/10 border-[#0A66C2]/20 hover:bg-[#0A66C2]/20">
-                    <FontAwesomeIcon
-                        icon={faLinode}
-                        className="w-8 h-8"
-                        color="#0A66C2"
-                    />
-                    Node
-                </LinkWithIcon>
+                <H3 className="text-muted-foreground text-md lg:text-lg">
+                    Back-End
+                </H3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {stack.backend.map((tech) => (
+                        <StackCard
+                            title={tech.title}
+                            iconColor={tech.iconColor}
+                            iconName={tech.iconName}
+                            key={tech.iconColor}
+                        />
+                    ))}
+                </div>
+                <H3 className="text-muted-foreground text-md lg:text-lg mb-2">
+                    Front-End
+                </H3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {stack.frontend.map((tech) => (
+                        <StackCard
+                            title={tech.title}
+                            iconColor={tech.iconColor}
+                            iconName={tech.iconName}
+                            key={tech.iconColor}
+                        />
+                    ))}
+                </div>
+                <H3 className="text-muted-foreground text-md lg:text-lg">
+                    Tools
+                </H3>
+                <div className="flex flex-wrap gap-2">
+                    {stack.tools.map((tech) => (
+                        <StackCard
+                            title={tech.title}
+                            iconColor={tech.iconColor}
+                            iconName={tech.iconName}
+                            key={tech.iconColor}
+                        />
+                    ))}
+                </div>
             </section>
             <section className="About me section">
                 <H2>About me</H2>
@@ -85,5 +118,4 @@ export default function Home() {
         </>
     );
 }
-
 const featuredProjects = [];
