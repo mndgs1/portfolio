@@ -87,19 +87,19 @@ export default function Home() {
                 <div className="flex flex-col lg:flex-row xl:mx-24 lg:gap-20 items-center">
                     <div className="lg:order-2 mb-6">
                         <P className="md:mb-6">
-                            Hey there! I'm [Your Name], a 31-year-old with a
-                            passion for building both physical and digital
-                            worlds. For over a decade, I've wielded my tools as
-                            a carpenter, crafting structures and spaces that
-                            stand the test of time. But as life evolved, so did
-                            my interests.
+                            Hey there! I&apos;m [Your Name], a 31-year-old with
+                            a passion for building both physical and digital
+                            worlds. For over a decade, I&apos;ve wielded my
+                            tools as a carpenter, crafting structures and spaces
+                            that stand the test of time. But as life evolved, so
+                            did my interests.
                         </P>
                         <P>
-                            Today, I'm not just a carpenter; I'm a family man.
-                            My world revolves around my wonderful wife, two
-                            energetic boys, and our loyal canine companion. They
-                            bring joy, chaos, and a whole lot of love into every
-                            corner of our lives.
+                            Today, I&apos;m not just a carpenter; I&apos;m a
+                            family man. My world revolves around my wonderful
+                            wife, two energetic boys, and our loyal canine
+                            companion. They bring joy, chaos, and a whole lot of
+                            love into every corner of our lives.
                         </P>
                     </div>
                     <div className="">
