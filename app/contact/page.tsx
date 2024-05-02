@@ -30,28 +30,31 @@ const page = () => {
                 </Blockquote>
                 <Blockquote>
                     <P className="font-bold">Socials:</P>
-                    <Link href={socialLinks.linkedIn} target="_blank">
-                        <Button
-                            variant={"icon"}
-                            size={"icon"}
-                            className="w-14 h-14 mr-3">
-                            <FontAwesomeIcon
-                                icon={faLinkedin}
-                                className="w-8 h-8"
-                            />
-                        </Button>
-                    </Link>
-                    <Link href={socialLinks.github} target="_blank">
-                        <Button
-                            variant={"icon"}
-                            size={"icon"}
-                            className="w-14 h-14">
-                            <FontAwesomeIcon
-                                icon={faGithub}
-                                className="w-8 h-8"
-                            />
-                        </Button>
-                    </Link>
+                    <div className="flex flex-wrap gap-2">
+                        <Link href={socialLinks.linkedIn} target="_blank">
+                            <Button
+                                variant={"icon"}
+                                size={"icon"}
+                                className="w-14 h-14">
+                                <FontAwesomeIcon
+                                    icon={faLinkedin}
+                                    className="w-8 h-8"
+                                />
+                            </Button>
+                        </Link>
+                        <Link href={socialLinks.github} target="_blank">
+                            <Button
+                                variant={"icon"}
+                                size={"icon"}
+                                className="w-14 h-14">
+                                <FontAwesomeIcon
+                                    icon={faGithub}
+                                    className="w-8 h-8"
+                                />
+                            </Button>
+                        </Link>
+                        <DiscordButton />
+                    </div>
                 </Blockquote>
             </section>
             <section className="col-span-2 section">

@@ -33,7 +33,7 @@ export function H3({ children, className }: TypographyProps) {
 
 export function H4({ children, className }: TypographyProps) {
     const classes = cva(
-        "scroll-m-20 text-lg font-semibold tracking-tight lg:text-xl mb-2"
+        "scroll-m-20 text-lg font-semibold tracking-tight lg:text-xl"
     );
 
     return <h4 className={cn(classes({ className }))}>{children}</h4>;

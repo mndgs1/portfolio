@@ -13,8 +13,8 @@ const NavLink = ({ href, label, pathname }: NavLinkProps) => {
                 href={href}
                 className={`md:text-base w-max m-auto font-medium dark:font-normal group-hover:text-foreground transition-all flex flex-col items-center ${
                     pathname === href
-                        ? "text-foreground dark:text-foreground"
-                        : "text-dimmed dark:text-dimmed"
+                        ? "text-foreground"
+                        : "text-muted-foreground"
                 }`}>
                 {label}
                 <div

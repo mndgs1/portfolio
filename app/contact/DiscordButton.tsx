@@ -2,8 +2,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
-import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 
 const DiscordButton = () => {
     const handleDiscordClick = () => {
@@ -12,16 +12,13 @@ const DiscordButton = () => {
     };
 
     return (
-        <button onClick={handleDiscordClick}>
-            <Card className="py-2 px-4 flex gap-2 w-fit items-center group hover:bg-[#5865F2]/20 hover:border-[#5865F2] mb-2 bg-[#5865F2]/10 border-[#5865F2]/20 transition-all">
-                <FontAwesomeIcon
-                    icon={faDiscord}
-                    className="w-8 h-8"
-                    color="#5865F2"
-                />
-                Mndgs#7132
-            </Card>
-        </button>
+        <Button
+            variant={"icon"}
+            size={"icon"}
+            className="w-14 h-14"
+            onClick={handleDiscordClick}>
+            <FontAwesomeIcon icon={faDiscord} className="w-8 h-8" />
+        </Button>
     );
 };
 

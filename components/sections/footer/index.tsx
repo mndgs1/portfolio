@@ -19,7 +19,7 @@ const Footer = () => {
                 <H3 className="mb-0">Let&apos;s talk</H3>
                 <StyledLink
                     href="mailto:mindaugasbankauskas@gmail.com"
-                    className="text-xl lg:text-3xl font-bold">
+                    className="text-lg lg:text-3xl font-bold">
                     {email}
                 </StyledLink>
                 <div className="mt-2">
