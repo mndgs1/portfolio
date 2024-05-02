@@ -25,8 +25,6 @@ const Hero = () => {
                                 2000,
                                 "Carpenter of the Web",
                                 2000,
-                                "UX/UI Designer",
-                                2000,
                                 "Front-End Developer",
                                 2000,
                             ]}
@@ -35,8 +33,8 @@ const Hero = () => {
                     </H1>
                 </div>
                 <P variant={"muted"} className="mb-0">
-                    As a full-stack JavaScript developer, I build modern web
-                    apps with tools such as{" "}
+                    As a Front-End JavaScript developer, I build modern web apps
+                    with tools such as{" "}
                     <StyledLink href="#">React.js</StyledLink>,{" "}
                     <StyledLink href="#">Next.js</StyledLink> &{" "}
                     <StyledLink href="#">Tailwind CSS</StyledLink>

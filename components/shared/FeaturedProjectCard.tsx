@@ -9,33 +9,25 @@ import Image from "next/image";
 import { P } from "../typography/Paragraph";
 import StyledLink from "./StyledLink";
 
-const FeaturedProjectCard = () => {
+const FeaturedProjectCard = ({ project }: any) => {
     return (
         <Card className="h-96 hover:border-primary grid grid-cols-2 group overflow-hidden">
             <div>
                 <CardHeader>
-                    <CardTitle className="group-hover:underline">
-                        Holidaze
-                    </CardTitle>
+                    <CardTitle className="">{project.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <P variant={"muted"}>
-                        asdasdas dasda sdasd asd asd asd asd asd asd
-                    </P>
-                </CardContent>
-                <CardFooter>
+                    <P variant={"muted"}>{project.shortDescription}</P>
                     <StyledLink href="#">Read More</StyledLink>
-                </CardFooter>
+                </CardContent>
             </div>
-            <div className="">
+            <div className="p-4">
                 <Image
-                    src={
-                        "/img/holidaze/holidaze-eight.vercel.app_holidaze_properties_dea387d8-01de-4b13-945c-3b8cd5798ae5(iPhone XR).png"
-                    }
+                    src={project.image}
                     alt=""
                     width={300}
                     height={800}
-                    className="object-cover w-full h-full transform group-hover:-translate-y-2/4 delay-500 duration-1000 transition-all"
+                    className="object-contain w-full h-full"
                 />
             </div>
         </Card>

@@ -18,6 +18,7 @@ import Link from "next/link";
 import Image from "next/image";
 import StackCard from "@/components/shared/StackCard";
 import { person } from "@/data/person";
+import { projects } from "@/data/projects";
 
 export default function Home() {
     const { stack } = person;
@@ -28,12 +29,13 @@ export default function Home() {
                 <H2>Featured Projects</H2>
                 <Carousel>
                     <CarouselContent>
-                        <CarouselItem className="lg:basis-1/2 group">
-                            <FeaturedProjectCard />
-                        </CarouselItem>
-                        <CarouselItem className="lg:basis-1/2 group">
-                            <FeaturedProjectCard />
-                        </CarouselItem>
+                        {projects.map((project) => (
+                            <CarouselItem
+                                className="lg:basis-1/2 group"
+                                key={project.title}>
+                                <FeaturedProjectCard project={project} />
+                            </CarouselItem>
+                        ))}
                     </CarouselContent>
                     <CarouselPrevious className="hidden xl:flex hover:border-primary" />
                     <CarouselNext className="hidden xl:flex" />

@@ -30,7 +30,7 @@ const ProjectCard = ({
     stack,
 }: ProjectCardProps) => {
     return (
-        <div className="border-b pb-6 md:pb-10">
+        <div className="border-b pb-6 md:pb-10 section">
             <H2 className="inline-block border-b border-b-primary ">{title}</H2>
             <div className="lg:grid lg:grid-cols-3 lg:gap-8 items-center">
                 <Image
@@ -59,10 +59,10 @@ const ProjectCard = ({
                         </div>
                     </div>
                     <div className="flex flex-wrap gap-4">
-                        <Link href={liveLink}>
+                        <Link href={liveLink} target="_blank">
                             <Button>View Live</Button>
                         </Link>
-                        <Link href={repoLink}>
+                        <Link href={repoLink} target="_blank">
                             <Button variant={"secondary"}>Github Repo</Button>
                         </Link>
                     </div>
