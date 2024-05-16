@@ -20,7 +20,8 @@ export default function Home() {
     return (
         <>
             <Hero />
-            <section className="featured section">
+            {/* Needs FIXES */}
+            {/* <section className="featured section">
                 <H2>Featured Projects</H2>
                 <Carousel>
                     <CarouselContent>
@@ -35,7 +36,7 @@ export default function Home() {
                     <CarouselPrevious className="hidden xl:flex hover:border-primary" />
                     <CarouselNext className="hidden xl:flex hover:border-primary" />
                 </Carousel>
-            </section>
+            </section> */}
             <section className="My stack">
                 <H2 className="">My stack</H2>
                 <H3 className="text-muted-foreground text-md lg:text-lg">
