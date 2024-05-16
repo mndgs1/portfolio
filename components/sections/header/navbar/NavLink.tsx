@@ -1,14 +1,14 @@
 import Link from "next/link";
 
-interface NavLinkProps {
+interface NavLinkProps extends React.ReactElement {
     href: string;
     label: string;
     pathname: string;
 }
 
-const NavLink = ({ href, label, pathname }: NavLinkProps) => {
+const NavLink = ({ href, label, pathname, ...rest }: NavLinkProps) => {
     return (
-        <li className="group">
+        <li className="group" {...rest}>
             <Link
                 href={href}
                 className={`md:text-base w-max m-auto font-medium dark:font-normal group-hover:text-foreground transition-all flex flex-col items-center ${

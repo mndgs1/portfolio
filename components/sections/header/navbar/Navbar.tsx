@@ -4,14 +4,14 @@ import NavLink from "./NavLink";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const Links = [
+export const Links = [
     { href: "/", label: "Home" },
     { href: "/portfolio", label: "Portfolio" },
     // { href: "/resume", label: "Resume" },
     // { href: "/contact", label: "Contact" },
 ];
 
-interface NavProps {
+export interface NavProps {
     listClasses?: string;
     linkClasses?: string;
 }

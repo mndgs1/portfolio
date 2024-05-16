@@ -91,7 +91,7 @@ export default function Home() {
                         ))}
                     </div>
                     <div className="">
-                        <div className="bg-green-500 w-96 h-96 rounded-full">
+                        <div className="aspect-square max-w-96 max-h-96 lg:w-96 lg:h-96 rounded-full">
                             <Image
                                 src="/img/personal/family_photo.jpeg"
                                 alt="personal photo"

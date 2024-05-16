@@ -11,11 +11,19 @@ import {
 } from "@/components/ui/sheet";
 
 import { Menu } from "lucide-react";
-import Navbar from "./Navbar";
+import Navbar, { Links } from "./Navbar";
+import NavLink from "./NavLink";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { useState } from "react";
 
 const MobileNav = () => {
+    const pathname = usePathname();
+
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
             <SheetTrigger asChild>
                 <Button
                     variant={"icon"}
@@ -25,7 +33,26 @@ const MobileNav = () => {
                 </Button>
             </SheetTrigger>
             <SheetContent className="flex items-center justify-center">
-                <Navbar listClasses="flex-col gap-8" linkClasses="" />
+                <nav>
+                    <ul className={`flex flex-col gap-10 items-center`}>
+                        {Links.map(({ href, label }) => (
+                            <NavLink
+                                href={href}
+                                label={label}
+                                pathname={pathname}
+                                key={label}
+                                onClick={() => setIsOpen(!isOpen)}
+                            />
+                        ))}
+                        <li>
+                            <SheetClose asChild>
+                                <Link href={"/contact"}>
+                                    <Button>Let&apos;s talk</Button>
+                                </Link>
+                            </SheetClose>
+                        </li>
+                    </ul>
+                </nav>
             </SheetContent>
         </Sheet>
     );

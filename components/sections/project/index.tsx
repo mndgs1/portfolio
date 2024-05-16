@@ -47,7 +47,7 @@ const ProjectCard = ({
                     </div>
                     <div>
                         <H4 className="text-muted-foreground">Stack</H4>
-                        <div className="flex flex-wrap gap-2 md:gap-4">
+                        <div className="flex flex-wrap gap-2">
                             {stack.map((tech) => (
                                 <StackCard
                                     iconColor={tech.iconColor}

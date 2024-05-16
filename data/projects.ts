@@ -1,32 +1,5 @@
 export const projects = [
     {
-        title: "techNotes",
-        image: "/img/technotes/techNotes.png",
-        links: {
-            live: "https://technotes-dg1j.onrender.com/",
-            github: "https://github.com/mndgs1/first-mern-app-frontend",
-        },
-        shortDescription:
-            "A notes APP with Secure login with JWT refresh/access tokens, locked routes by role, admin panel.",
-        stack: [
-            {
-                title: "Typescript",
-                iconColor: "#3178C6",
-                iconName: "typescript",
-            },
-            {
-                title: "React.js",
-                iconColor: "#61DAFB",
-                iconName: "react",
-            },
-            {
-                title: "Node.js",
-                iconColor: "#5FA04E",
-                iconName: "Node.js",
-            },
-        ],
-    },
-    {
         title: "Holidaze",
         image: "/img/holidaze/Holidaze.png",
         links: {
@@ -53,6 +26,49 @@ export const projects = [
             },
         ],
     },
+    {
+        title: "techNotes",
+        image: "/img/technotes/techNotes.png",
+        links: {
+            live: "https://technotes-dg1j.onrender.com/",
+            github: "https://github.com/mndgs1/first-mern-app-frontend",
+        },
+        shortDescription:
+            "A notes APP with Secure login with JWT refresh/access tokens, locked routes by role, admin panel.",
+        stack: [
+            {
+                title: "Typescript",
+                iconColor: "#3178C6",
+                iconName: "typescript",
+            },
+            {
+                title: "React.js",
+                iconColor: "#61DAFB",
+                iconName: "react",
+            },
+            {
+                title: "Node.js",
+                iconColor: "#5FA04E",
+                iconName: "Node.js",
+            },
+            {
+                title: "MongoDB",
+                iconColor: "#5FA04E",
+                iconName: "mongodb",
+            },
+            {
+                title: "Vite",
+                iconColor: "#646CFF",
+                iconName: "vite",
+            },
+            {
+                title: "Redux RTK",
+                iconColor: "#764ABC",
+                iconName: "redux",
+            },
+        ],
+    },
+
     {
         title: "Life of Mi",
         image: "/img/life-of-mi/life-of-mi.png",
