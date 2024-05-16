@@ -38,7 +38,7 @@ const ProjectCard = ({
                     alt="asd"
                     height={1000}
                     width={800}
-                    className="col-span-2 mx-auto lg:order-last"
+                    className="col-span-2 mx-auto lg:order-last object-contain size-3/4"
                 />
                 <div className="flex flex-col gap-4">
                     <div>

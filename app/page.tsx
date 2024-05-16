@@ -10,11 +10,6 @@ import { H2, H3 } from "@/components/typography/Headings";
 import { P } from "@/components/typography/Paragraph";
 import FeaturedProjectCard from "@/components/shared/FeaturedProjectCard";
 
-import LinkWithIcon from "@/components/shared/LinkWithIcon";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faNodeJs, faReact } from "@fortawesome/free-brands-svg-icons";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import Link from "next/link";
 import Image from "next/image";
 import StackCard from "@/components/shared/StackCard";
 import { person } from "@/data/person";
@@ -88,21 +83,11 @@ export default function Home() {
                 {/* <div className="md:grid md:grid-cols-2 md:justify-items-right md:items-center"> */}
                 <div className="flex flex-col lg:flex-row xl:mx-24 lg:gap-20 items-center">
                     <div className="lg:order-2 mb-6">
-                        <P className="md:mb-6">
-                            Hey there! I&apos;m [Your Name], a 31-year-old with
-                            a passion for building both physical and digital
-                            worlds. For over a decade, I&apos;ve wielded my
-                            tools as a carpenter, crafting structures and spaces
-                            that stand the test of time. But as life evolved, so
-                            did my interests.
-                        </P>
-                        <P>
-                            Today, I&apos;m not just a carpenter; I&apos;m a
-                            family man. My world revolves around my wonderful
-                            wife, two energetic boys, and our loyal canine
-                            companion. They bring joy, chaos, and a whole lot of
-                            love into every corner of our lives.
-                        </P>
+                        {person.aboutMe.map((paragraph, index) => (
+                            <P className="md:mb-6" key={index}>
+                                {paragraph}
+                            </P>
+                        ))}
                     </div>
                     <div className="">
                         <div className="bg-green-500 w-96 h-96 rounded-full">
@@ -120,4 +105,3 @@ export default function Home() {
         </>
     );
 }
-const featuredProjects = [];

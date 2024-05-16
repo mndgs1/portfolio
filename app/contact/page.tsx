@@ -11,6 +11,13 @@ import LinkWithIcon from "../../components/shared/LinkWithIcon";
 import { person } from "@/data/person";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact | Mindaugas Bankauskas Front-End Developer",
+    description:
+        "Get in touch with Mindaugas Bankauskas, a talented Front-End Developer, to discuss collaborations, projects, or any inquiries. Reach out and let's connect!",
+};
 
 const page = () => {
     const { socialLinks } = person;

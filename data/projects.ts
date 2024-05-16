@@ -7,7 +7,7 @@ export const projects = [
             github: "https://github.com/mndgs1/first-mern-app-frontend",
         },
         shortDescription:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quasi dignissimos. Libero inventore vitae atque laboriosam in,eligendi, optio placeat maxime quae veronecessitatibus animi, doloribus assumenda culpa tempore aliquam.",
+            "A notes APP with Secure login with JWT refresh/access tokens, locked routes by role, admin panel.",
         stack: [
             {
                 title: "Typescript",
@@ -34,7 +34,7 @@ export const projects = [
             github: "https://github.com/mndgs1/Holidaze",
         },
         shortDescription:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quasi dignissimos. Libero inventore vitae atque laboriosam in,eligendi, optio placeat maxime quae veronecessitatibus animi, doloribus assumenda culpa tempore aliquam.",
+            "A bookings website where a user can book a property, list a property, and manage bookings. The project is using Noroff API.",
         stack: [
             {
                 title: "Typescript",
@@ -61,7 +61,7 @@ export const projects = [
             github: "https://github.com/mndgs1/life-of-mi",
         },
         shortDescription:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quasi dignissimos. Libero inventore vitae atque laboriosam in,eligendi, optio placeat maxime quae veronecessitatibus animi, doloribus assumenda culpa tempore aliquam.",
+            "A blog website. Using Vanilla JS, CSS, HTML & Wordpress Headless API.",
         stack: [
             {
                 title: "HTML5",
