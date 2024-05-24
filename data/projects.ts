@@ -1,5 +1,37 @@
 export const projects = [
     {
+        title: "AI Chat",
+        image: "/img/aichatbot/aichatbot.png",
+        links: {
+            live: "https://aichatbot-drab.vercel.app/",
+            github: "https://github.com/mndgs1/aichatbot",
+        },
+        shortDescription:
+            "A small AI Chat Bot using OpenAI API, Vercel AI SDK, Next.js, Typescript, Shadcn & Tailwind",
+        stack: [
+            {
+                title: "Next.js",
+                iconColor: "#000000",
+                iconName: "next.js",
+            },
+            {
+                title: "Typescript",
+                iconColor: "#61DAFB",
+                iconName: "typescript",
+            },
+            {
+                title: "Tailwind",
+                iconColor: "#06B6D4",
+                iconName: "tailwindcss",
+            },
+            {
+                title: "shadcn/ui",
+                iconColor: "#000000",
+                iconName: "shadcnui",
+            },
+        ],
+    },
+    {
         title: "Holidaze",
         image: "/img/holidaze/Holidaze.png",
         links: {
@@ -26,6 +58,7 @@ export const projects = [
             },
         ],
     },
+
     {
         title: "techNotes",
         image: "/img/technotes/techNotes.png",
