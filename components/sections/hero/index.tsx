@@ -45,9 +45,7 @@ const Hero = () => {
                     </Link>
                     <Link
                         target="_blank"
-                        href={
-                            "/pdf/Mindaugas_Bankauskas_-_Frontend_Developer.pdf"
-                        }>
+                        href={"/pdf/Mindaugas_Bankauskas_CV.pdf"}>
                         <Button variant={"secondary"}>My Resume</Button>
                     </Link>
                 </div>
