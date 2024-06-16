@@ -3,7 +3,6 @@ interface ContactFormValues {
     name: string;
     email: string;
     message: string;
-    subject: string;
 }
 
 export async function submitContactForm(values: ContactFormValues) {
