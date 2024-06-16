@@ -17,13 +17,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
 import { toast } from "sonner";
 import { submitContactForm } from "./submitContactForm";
 
@@ -32,7 +25,6 @@ const formSchema = z.object({
         message: "Name must be at least 2 characters.",
     }),
     email: z.string().email({ message: "Invalid email address." }),
-    subject: z.string().min(1, { message: "Please select a subject." }),
     message: z
         .string()
         .min(10, { message: "Message must be at least 10 characters." }),
@@ -46,7 +38,6 @@ export function ContactForm() {
         defaultValues: {
             name: "",
             email: "",
-            subject: "",
             message: "",
         },
     });
@@ -112,37 +103,6 @@ export function ContactForm() {
                                 />
                             </FormControl>
                             <FormDescription></FormDescription>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="subject"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Subject</FormLabel>
-                            <Select
-                                onValueChange={field.onChange}
-                                defaultValue={field.value}
-                                name="subject">
-                                <FormControl>
-                                    <SelectTrigger>
-                                        <SelectValue placeholder="Select a subject" />
-                                    </SelectTrigger>
-                                </FormControl>
-                                <SelectContent>
-                                    <SelectItem value="Colaboration">
-                                        Colaboration
-                                    </SelectItem>
-                                    <SelectItem value="Work inquires">
-                                        Work inquires
-                                    </SelectItem>
-                                    <SelectItem value="Other">
-                                        Other...
-                                    </SelectItem>
-                                </SelectContent>
-                            </Select>
                             <FormMessage />
                         </FormItem>
                     )}
